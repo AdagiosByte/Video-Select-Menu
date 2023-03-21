@@ -6,6 +6,10 @@
     --slider-padding: 5%;
 }
 
+body{
+    background-color:cadetblue;
+}
+
 .container{
     cursor: pointer;
     display: flex;
@@ -73,19 +77,14 @@
     gap: 1rem;
 }
 
-.item1{
+.bar{
     height: 1rem;
     width: 1rem;
     background-color: black;
 }
-.item2{
+
+.selected-bar{
     height: 1rem;
     width: 1rem;
-    justify-content: right;
     background-color: red;
-}
-.item3{
-    height: 1rem;
-    width: 1rem;
-    background-color: black;
 }
