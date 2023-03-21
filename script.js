@@ -13,12 +13,25 @@ function onSliderClick(slider){
     const shiftd = slider.closest(".container").querySelector(".slider")
     const shiftd_index = parseInt(getComputedStyle(shiftd).getPropertyValue("--slider_index"))
     if (slider.classList.contains("right-arrow")){
-        shiftd.style.setProperty("--slider_index", shiftd_index+1)
-        updateProgressBar(shiftd_index+1)
+        if(shiftd_index  === 2){
+            shiftd.style.setProperty("--slider_index", 0)
+            updateProgressBar(0)
+        }
+        else{
+            shiftd.style.setProperty("--slider_index", shiftd_index+1)
+            updateProgressBar(shiftd_index+1)
+        }
     }
     if (slider.classList.contains("left-arrow")){
-        shiftd.style.setProperty("--slider_index", shiftd_index-1)
-        updateProgressBar(shiftd_index-1)
+        if(shiftd_index  === 0){
+            shiftd.style.setProperty("--slider_index", 2)
+            updateProgressBar(2)
+        }
+        else{
+            shiftd.style.setProperty("--slider_index", shiftd_index-1)
+            updateProgressBar(shiftd_index-1)
+        }
+
     }
 }
 
